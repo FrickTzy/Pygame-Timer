@@ -1,4 +1,4 @@
-from timer import Timer
+from .timer import Timer
 
 
 class IntervalTimer(Timer):
@@ -25,7 +25,7 @@ class IntervalTimer(Timer):
 
     def debug(self) -> None:
         """
-        Prints debugging information for the interval timer.
+        Prints debugging information for the interval pygame_timer.
         """
         print("Debugging: ")
         print(f"current time: {self.get_current_ms_time()}")

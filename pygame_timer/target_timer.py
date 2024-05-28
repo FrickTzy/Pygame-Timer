@@ -1,5 +1,5 @@
-from timer import Timer
-from stopwatch_timer import StopwatchTimer
+from .timer import Timer
+from .stopwatch_timer import StopwatchTimer
 
 
 class TargetTimer(Timer):
@@ -33,7 +33,7 @@ class TargetTimer(Timer):
 
     def reset(self) -> None:
         """
-        Resets the timer.
+        Resets the pygame_timer.
         """
         self.__ms_restarted = self.get_current_ms_time()
         self.__pause_timer.reset()
@@ -41,7 +41,7 @@ class TargetTimer(Timer):
 
     def check_if_finished_timer(self) -> bool:
         """
-        Checks if the timer has reached the target time.
+        Checks if the pygame_timer has reached the target time.
 
         :return: True if the target time is reached, otherwise False.
         """
@@ -52,7 +52,7 @@ class TargetTimer(Timer):
     @property
     def get_current_elapsed_ms(self) -> int:
         """
-        Gets the current elapsed time of the timer in milliseconds.
+        Gets the current elapsed time of the pygame_timer in milliseconds.
 
         :return: The current elapsed time in milliseconds.
         """
@@ -60,7 +60,7 @@ class TargetTimer(Timer):
 
     def debug(self) -> None:
         """
-        Prints debugging information for the timer.
+        Prints debugging information for the pygame_timer.
         """
         print(
             f"current time: {self.get_current_elapsed_ms} | ms restarted: {self.__ms_restarted} | "
@@ -68,12 +68,12 @@ class TargetTimer(Timer):
 
     def pause(self) -> None:
         """
-        Pauses the timer.
+        Pauses the pygame_timer.
         """
         self.__pause_timer.start()
 
     def resume(self) -> None:
         """
-        Resumes the timer.
+        Resumes the pygame_timer.
         """
         self.__pause_timer.pause()

@@ -1,4 +1,4 @@
-from timer import Timer
+from .timer import Timer
 
 
 class CooldownTimer(Timer):
@@ -36,14 +36,14 @@ class CooldownTimer(Timer):
 
     def reset_cooldown(self) -> None:
         """
-        Resets the cooldown timer.
+        Resets the cooldown pygame_timer.
         """
         self.__last_time_taken = self.get_current_ms_time()
         self.__finished_cooldown = False
 
     def debug(self) -> None:
         """
-        Prints debugging information for the cooldown timer.
+        Prints debugging information for the cooldown pygame_timer.
         """
         print("Debugging: ")
         print(f"current time: {self.get_current_ms_time()}")

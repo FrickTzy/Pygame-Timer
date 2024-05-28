@@ -1,4 +1,4 @@
-from timer import Timer
+from .timer import Timer
 
 
 class StopwatchTimer(Timer):
@@ -13,7 +13,7 @@ class StopwatchTimer(Timer):
 
     def reset(self) -> None:
         """
-        Resets the stopwatch timer.
+        Resets the stopwatch pygame_timer.
         """
         self.__ms_start = 0
         self.__ms_ended = 0
@@ -33,14 +33,14 @@ class StopwatchTimer(Timer):
 
     def start(self) -> None:
         """
-        Starts or resumes the stopwatch timer.
+        Starts or resumes the stopwatch pygame_timer.
         """
         self.__ms_start = self.get_current_ms_time()
         self.__started_timer = True
 
     def pause(self) -> None:
         """
-        Pauses the stopwatch timer.
+        Pauses the stopwatch pygame_timer.
         """
         self.__ms_ended = self.get_current_ms_time()
         self.__total_ms_spent += self.__ms_ended - self.__ms_start

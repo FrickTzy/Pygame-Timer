@@ -1,4 +1,4 @@
-from timer import Timer
+from .timer import Timer
 
 
 class ActivationTimer(Timer):
@@ -49,7 +49,7 @@ class ActivationTimer(Timer):
 
     def debug(self) -> None:
         """
-        Prints debugging information for the activation timer.
+        Prints debugging information for the activation pygame_timer.
         """
         print("Debugging: ")
         print(f"current time: {self.get_current_ms_time()}")
